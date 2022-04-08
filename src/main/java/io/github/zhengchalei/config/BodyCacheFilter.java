@@ -1,4 +1,4 @@
-package com.github.zhengchalei.config;
+package io.github.zhengchalei.config;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;

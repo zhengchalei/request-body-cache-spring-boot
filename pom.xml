@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.zhengchalei</groupId>
+    <groupId>io.github.zhengchalei</groupId>
     <artifactId>spring-boot-request-body-cache</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>body-cache-spring-boot-starter</name>

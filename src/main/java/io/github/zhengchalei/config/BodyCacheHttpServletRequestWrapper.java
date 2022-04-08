@@ -1,4 +1,4 @@
-package com.github.zhengchalei.config;
+package io.github.zhengchalei.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

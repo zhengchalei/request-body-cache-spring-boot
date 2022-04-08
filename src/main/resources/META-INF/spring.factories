@@ -1,3 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.github.zhengchalei.config.BodyCacheFilter,\
-  com.github.zhengchalei.config.BodyCacheHttpServletRequestWrapper
+  io.github.zhengchalei.config.BodyCacheFilter,\
+  io.github.zhengchalei.config.BodyCacheHttpServletRequestWrapper
