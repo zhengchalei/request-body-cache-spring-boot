@@ -16,7 +16,6 @@ import java.io.InputStream;
  * BodyCacheHttpServletRequestWrapper
  *
  * @author 郑查磊
- * @date 2022年4月8日00:30:27
  */
 @Primary
 @Configuration
@@ -30,8 +29,9 @@ public class BodyCacheHttpServletRequestWrapper extends HttpServletRequestWrappe
 
     @Override
     public ServletInputStream getInputStream() throws IOException {
-        // 第一次缓存
+        // 第一次 也就是不存在的情况, Cache
         if (bodyBytes == null) bodyBytes = getBytes(super.getInputStream());
+        // 后续只需要拿 bodyBytes Return 出去就行
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bodyBytes);
         return new ServletInputStream() {
             @Override
