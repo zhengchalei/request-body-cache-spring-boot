@@ -30,7 +30,9 @@ public class BodyCacheHttpServletRequestWrapper extends HttpServletRequestWrappe
     @Override
     public ServletInputStream getInputStream() throws IOException {
         // 第一次 也就是不存在的情况, Cache
-        if (bodyBytes == null) bodyBytes = getBytes(super.getInputStream());
+        if (bodyBytes == null) {
+            bodyBytes = getBytes(super.getInputStream());
+        }
         // 后续只需要拿 bodyBytes Return 出去就行
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bodyBytes);
         return new ServletInputStream() {
