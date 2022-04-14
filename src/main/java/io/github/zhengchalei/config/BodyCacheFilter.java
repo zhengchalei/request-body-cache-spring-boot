@@ -13,7 +13,6 @@ import java.io.IOException;
  * @author 郑查磊
  */
 @Order(Integer.MIN_VALUE)
-@Component
 public class BodyCacheFilter implements Filter {
 
     @Override
@@ -23,8 +22,8 @@ public class BodyCacheFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        BodyCacheHttpServletRequestWrapper bladeRequest = new BodyCacheHttpServletRequestWrapper((HttpServletRequest) servletRequest);
-        filterChain.doFilter(bladeRequest, servletResponse);
+        BodyCacheHttpServletRequestWrapper requestWrapper = new BodyCacheHttpServletRequestWrapper((HttpServletRequest) servletRequest);
+        filterChain.doFilter(requestWrapper, servletResponse);
     }
 
     @Override
